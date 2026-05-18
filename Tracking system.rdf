@@ -1,0 +1,1034 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164/"
+     xml:base="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164/"
+     xmlns:gr="http://purl.org/goodrelations/v1#ProductOrService"
+     xmlns:iao="http://purl.obolibrary.org/obo/IAO_0000310#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:slso="http://www.w3.org/2006/vcard/ns#Individual"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/"
+     xmlns:schema1="http://schema.org/"
+     xmlns:untitled-ontology-164="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#containsItem"/>
+        <rdfs:domain rdf:resource="https://schema.org/OrderItem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/deliveryAddress -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/deliveryAddress">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/orderedItem -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/orderedItem">
+        <rdfs:domain rdf:resource="https://schema.org/OrderItem"/>
+        <rdfs:range rdf:resource="https://schema.org/Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#containsItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#containsItem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+        <rdfs:range rdf:resource="https://schema.org/OrderItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#generatesInvoice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#generatesInvoice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Invoice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#handledBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#handledBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment"/>
+        <rdfs:range rdf:resource="https://schema.org/Organization#Courier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasCancellation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasCancellation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Cancellation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasPayment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasPayment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasReturnRequest -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasReturnRequest">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#ReturnRequest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasShipment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasShipment">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#isShipmentOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasTracking -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasTracking">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Tracking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#isShipmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#isShipmentOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#notifiesCustomer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#notifiesCustomer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Notification"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#placesOrder -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#placesOrder">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#sendsNotification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#sendsNotification">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Admin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Notification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#soldBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#soldBy">
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="https://schema.org/Organization#Seller"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Cancellation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Invoice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Notification"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#ReturnRequest"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Admin"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Invoice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Notification"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#ReturnRequest"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Tracking"/>
+                    <rdf:Description rdf:about="https://schema.org/OrderItem"/>
+                    <rdf:Description rdf:about="https://schema.org/Product"/>
+                    <rdf:Description rdf:about="https://schema.org/Organization#Courier"/>
+                    <rdf:Description rdf:about="https://schema.org/Organization#Seller"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/addressLocality -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/addressLocality">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/addressRegion -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/addressRegion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/email -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/email">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer"/>
+                    <rdf:Description rdf:about="https://schema.org/Organization#Seller"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/orderDate -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/orderDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/orderNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/orderNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/paymentMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/paymentMethod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/postalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/postalCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/streetAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/streetAddress">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/telephone -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/telephone">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer"/>
+                    <rdf:Description rdf:about="https://schema.org/Organization#Seller"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/trackingNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/trackingNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#categoryName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#categoryName">
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#country -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#country">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer"/>
+                    <rdf:Description rdf:about="https://schema.org/Organization#Seller"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#customerId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#customerId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#customerName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#customerName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#deliveryDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#deliveryDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#dispatchDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#dispatchDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#eventLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#eventLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Tracking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#eventTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#eventTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Tracking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#expectedDeliveryDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#expectedDeliveryDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#paymentAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#paymentAmount">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Invoice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#paymentId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#paymentId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#productId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#productId">
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#productName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#productName">
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#shipmentId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#shipmentId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#totalAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#totalAmount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#unitPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#unitPrice">
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000310 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000310">
+        <rdfs:label>Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#ProductOrService -->
+
+    <owl:Class rdf:about="http://purl.org/goodrelations/v1#ProductOrService"/>
+    
+
+
+    <!-- http://schema.org/DeliveryEvent -->
+
+    <owl:Class rdf:about="http://schema.org/DeliveryEvent"/>
+    
+
+
+    <!-- http://schema.org/Organization -->
+
+    <owl:Class rdf:about="http://schema.org/Organization"/>
+    
+
+
+    <!-- http://schema.org/TradeAction -->
+
+    <owl:Class rdf:about="http://schema.org/TradeAction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address">
+        <rdfs:subClassOf rdf:resource="http://schema.org/DeliveryEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Admin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Admin">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#sendsNotification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Notification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Cancellation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Cancellation">
+        <rdfs:subClassOf rdf:resource="http://schema.org/TradeAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#placesOrder"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/email"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/telephone"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#customerName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#DeliveredOrder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#DeliveredOrder">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasPayment"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasShipment"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Invoice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Invoice">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Notification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Notification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Notification">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#notifiesCustomer"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order">
+        <rdfs:subClassOf rdf:resource="http://schema.org/TradeAction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#containsItem"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/OrderItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/orderNumber"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#totalAmount"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment">
+        <rdfs:subClassOf rdf:resource="http://schema.org/TradeAction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/paymentMethod"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#paymentAmount"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#ReturnRequest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#ReturnRequest">
+        <rdfs:subClassOf rdf:resource="http://schema.org/TradeAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment">
+        <rdfs:subClassOf rdf:resource="http://schema.org/DeliveryEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/deliveryAddress"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#handledBy"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/Organization#Courier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#hasTracking"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Tracking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#isShipmentOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/trackingNumber"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Tracking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Tracking">
+        <rdfs:subClassOf rdf:resource="http://schema.org/DeliveryEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Individual -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Individual"/>
+    
+
+
+    <!-- https://schema.org/OrderItem -->
+
+    <owl:Class rdf:about="https://schema.org/OrderItem">
+        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrService"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/orderedItem"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Product -->
+
+    <owl:Class rdf:about="https://schema.org/Product">
+        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrService"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#soldBy"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/Organization#Seller"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#productName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#unitPrice"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Organization#Courier -->
+
+    <owl:Class rdf:about="https://schema.org/Organization#Courier">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+        <owl:disjointWith rdf:resource="https://schema.org/Organization#Seller"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Organization#Seller -->
+
+    <owl:Class rdf:about="https://schema.org/Organization#Seller">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address"/>
+        <schema1:addressLocality>Lahore</schema1:addressLocality>
+        <schema1:addressRegion>Punjab</schema1:addressRegion>
+        <schema1:postalCode>5300</schema1:postalCode>
+        <schema1:streetAddress>10</schema1:streetAddress>
+        <untitled-ontology-164:country>Pakistan</untitled-ontology-164:country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Admin001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Admin001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Admin"/>
+        <schema1:email>admin@ots.com</schema1:email>
+        <schema1:telephone>03112223344</schema1:telephone>
+        <schema1:telephone>System Administrator</schema1:telephone>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Cancellation001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Cancellation001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Cancellation"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-11T09:00:00</terms:date>
+        <terms:description>Order cancelled by customer</terms:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#CourierDHL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#CourierDHL">
+        <rdf:type rdf:resource="https://schema.org/Organization#Courier"/>
+        <terms:description>DHL Express Courier Service</terms:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Customer"/>
+        <untitled-ontology-164:placesOrder rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order1001"/>
+        <schema1:email>ali@gmail.com</schema1:email>
+        <schema1:telephone>03001234567</schema1:telephone>
+        <untitled-ontology-164:country>Pakistan</untitled-ontology-164:country>
+        <untitled-ontology-164:customerId>C001</untitled-ontology-164:customerId>
+        <untitled-ontology-164:customerName>Ali</untitled-ontology-164:customerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Invoice001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Invoice001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Invoice"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-11T10:00:00</terms:date>
+        <terms:description>Invoice generated for Order1001</terms:description>
+        <untitled-ontology-164:paymentAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150000</untitled-ontology-164:paymentAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Notification001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Notification001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Notification"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-09-11T10:00:00</terms:date>
+        <terms:description>Your shipment has been dispatched</terms:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order1001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order1001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Order"/>
+        <untitled-ontology-164:containsItem rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#OrderItem1"/>
+        <untitled-ontology-164:generatesInvoice rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Invoice001"/>
+        <untitled-ontology-164:hasCancellation rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Cancellation001"/>
+        <untitled-ontology-164:hasPayment rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment1001"/>
+        <untitled-ontology-164:hasReturnRequest rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#ReturnRequest001"/>
+        <untitled-ontology-164:hasShipment rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment1001"/>
+        <schema1:orderDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-10T10:30:00</schema1:orderDate>
+        <schema1:orderNumber>ORD1001</schema1:orderNumber>
+        <untitled-ontology-164:expectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-15T18:00:00</untitled-ontology-164:expectedDeliveryDate>
+        <untitled-ontology-164:totalAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150000</untitled-ontology-164:totalAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#OrderItem1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#OrderItem1">
+        <rdf:type rdf:resource="https://schema.org/OrderItem"/>
+        <schema1:orderedItem rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#ProductLaptop"/>
+        <terms:description>Laptop item included in order</terms:description>
+        <untitled-ontology-164:productName>laptop</untitled-ontology-164:productName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment1001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment1001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Payment"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-10T11:00:00</terms:date>
+        <schema1:paymentMethod>Credit Card</schema1:paymentMethod>
+        <untitled-ontology-164:paymentAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150000</untitled-ontology-164:paymentAmount>
+        <untitled-ontology-164:paymentId>PAY1001</untitled-ontology-164:paymentId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#ProductLaptop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#ProductLaptop">
+        <rdf:type rdf:resource="https://schema.org/Product"/>
+        <untitled-ontology-164:soldBy rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Seller001"/>
+        <terms:description>Gaming Laptop</terms:description>
+        <untitled-ontology-164:categoryName>Electronics</untitled-ontology-164:categoryName>
+        <untitled-ontology-164:productId>P101</untitled-ontology-164:productId>
+        <untitled-ontology-164:productName>Hp Laptop</untitled-ontology-164:productName>
+        <untitled-ontology-164:unitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150000</untitled-ontology-164:unitPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#ReturnRequest001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#ReturnRequest001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#ReturnRequest"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-20T14:00:00</terms:date>
+        <terms:description>Defective product return request</terms:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Seller001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Seller001">
+        <rdf:type rdf:resource="https://schema.org/Organization#Seller"/>
+        <terms:description>Electronics Seller</terms:description>
+        <schema1:email>seller@techstore.com</schema1:email>
+        <schema1:telephone>03211234567</schema1:telephone>
+        <untitled-ontology-164:country>Pakistan</untitled-ontology-164:country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment1001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment1001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Shipment"/>
+        <schema1:deliveryAddress rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Address001"/>
+        <untitled-ontology-164:handledBy rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#CourierDHL"/>
+        <untitled-ontology-164:hasTracking rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Tracking001"/>
+        <schema1:trackingNumber>TRK9090</schema1:trackingNumber>
+        <untitled-ontology-164:deliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-15T17:00:00</untitled-ontology-164:deliveryDate>
+        <untitled-ontology-164:dispatchDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-11T09:00:00</untitled-ontology-164:dispatchDate>
+        <untitled-ontology-164:shipmentId>SHP1001</untitled-ontology-164:shipmentId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Tracking001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Tracking001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laptop/ontologies/2026/3/untitled-ontology-164#Tracking"/>
+        <terms:description>Shipment arrived at facility</terms:description>
+        <untitled-ontology-164:eventLocation>Lahore Hub</untitled-ontology-164:eventLocation>
+        <untitled-ontology-164:eventTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-12T14:30:00</untitled-ontology-164:eventTime>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
